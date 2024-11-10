@@ -1,0 +1,144 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<project xmlns="http://maven.apache.org/POM/4.0.0"-->
+         <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+         <!--xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">-->
+    <!--<modelVersion>4.0.0</modelVersion>-->
+
+    <!--<parent>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-parent</artifactId>-->
+        <!--&lt;!&ndash;最早的&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>2.1.9.RELEASE</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;seata能用的&ndash;&gt;-->
+        <!--<version>2.2.1.RELEASE</version>-->
+        <!--&lt;!&ndash;51cto的&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>2.2.2.RELEASE</version>&ndash;&gt;-->
+        <!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+    <!--</parent>-->
+
+    <!--<groupId>com.icss.springcloud</groupId>-->
+    <!--<artifactId>singleproject</artifactId>-->
+    <!--<version>1.0-SNAPSHOT</version>-->
+
+
+
+
+
+    <!--<properties>-->
+        <!--<java.version>1.8</java.version>-->
+        <!--&lt;!&ndash;<spring-cloud.version>Greenwich.SR3</spring-cloud.version>&ndash;&gt;-->
+        <!--<spring-cloud.version>Hoxton.SR1</spring-cloud.version>-->
+    <!--</properties>-->
+
+    <!--<dependencies>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-web</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-test</artifactId>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok</artifactId>-->
+            <!--<version>1.16.10</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>mysql</groupId>-->
+            <!--<artifactId>mysql-connector-java</artifactId>-->
+            <!--&lt;!&ndash;<version>6.0.2</version>&ndash;&gt;-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; springboot热部署工具 &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-devtools</artifactId>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+        <!--<groupId>com.baomidou</groupId>-->
+        <!--<artifactId>mybatis-plus-boot-starter</artifactId>-->
+        <!--<version>3.5.7</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.mockito</groupId>-->
+            <!--<artifactId>mockito-core</artifactId>-->
+            <!--<version>2.7.19</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<groupId>org.mybatis</groupId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<artifactId>mybatis-spring</artifactId>&ndash;&gt;-->
+        <!--&lt;!&ndash;<version>2.0.0</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+            <!--&lt;!&ndash;<groupId>org.apache.logging.log4j</groupId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<artifactId>log4j-api</artifactId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<version>2.17.1</version> &lt;!&ndash; 使用最新版本 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+            <!--&lt;!&ndash;<groupId>org.apache.logging.log4j</groupId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<artifactId>log4j-core</artifactId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<version>2.17.1</version> &lt;!&ndash; 使用最新版本 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+            <!--&lt;!&ndash;<groupId>org.slf4j</groupId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<artifactId>slf4j-api</artifactId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<version>1.7.32</version> &lt;!&ndash; 使用最新版本 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+            <!--&lt;!&ndash;<groupId>org.slf4j</groupId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<artifactId>slf4j-simple</artifactId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<version>1.7.32</version> &lt;!&ndash; 使用简单的日志实现 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>ch.qos.logback</groupId>-->
+            <!--<artifactId>logback-core</artifactId>-->
+            <!--<version>1.1.8</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>ch.qos.logback</groupId>-->
+            <!--<artifactId>logback-classic</artifactId>-->
+            <!--<version>1.1.8</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>slf4j-api</artifactId>-->
+            <!--<version>1.7.22</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.google.code.gson</groupId>-->
+            <!--<artifactId>gson</artifactId>-->
+            <!--<version>2.9.0</version>-->
+            <!--<scope>compile</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>de.codecentric</groupId>-->
+            <!--<artifactId>spring-boot-admin-starter-server</artifactId>-->
+            <!--<version>2.2.0</version>-->
+        <!--</dependency>-->
+    <!--</dependencies>-->
+
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<fork>true</fork>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
+
+    <!---->
+<!--</project>-->

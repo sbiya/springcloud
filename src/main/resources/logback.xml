@@ -1,0 +1,63 @@
+<configuration>
+
+    <!-- 日志存放路径 -->
+    <property name="log.path" value="logs/springboot-admin" />
+    <!-- 日志输出格式 -->
+    <property name="log.pattern" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{20} - [%method,%line] - %msg%n" />
+
+    <!-- 控制台输出配置 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>北京时间：%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 定义文件输出 appender -->
+    <!--<appender name="FILE" class="ch.qos.logback.core.FileAppender">-->
+        <!--<file>logs/boot-admin-client/info.log</file> &lt;!&ndash; 这里指定了日志文件的路径 &ndash;&gt;-->
+        <!--<encoder>-->
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+
+
+
+    <!-- 系统日志输出 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/info.log</file>
+        <!-- 循环政策：基于时间创建日志文件 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 日志文件名格式 -->
+            <fileNamePattern>${log.path}/info.%d{yyyy-MM-dd_HH-mm}.log</fileNamePattern>
+            <!-- 日志最大的历史 30天 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <!--<filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+            <!--&lt;!&ndash; 过滤的级别 &ndash;&gt;-->
+            <!--<level>INFO</level>-->
+            <!--&lt;!&ndash; 匹配时的操作：接收（记录） &ndash;&gt;-->
+            <!--<onMatch>ACCEPT</onMatch>-->
+            <!--&lt;!&ndash; 不匹配时的操作：拒绝（不记录） &ndash;&gt;-->
+            <!--<onMismatch>DENY</onMismatch>-->
+        <!--</filter>-->
+    </appender>
+
+
+
+    <!-- 其他 appender 配置 -->
+    <!--<appender name="SPRING_BOOT_ADMIN" class="de.codecentric.boot.admin.logback.SpringBootAdminAppender">-->
+        <!--<url>http://localhost:8008</url>  &lt;!&ndash; Spring Boot Admin 服务器的 URL &ndash;&gt;-->
+    <!--</appender>-->
+
+    <!-- 根日志配置 -->
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <!-- 将日志输出到文件 -->
+        <appender-ref ref="FILE" />
+        <!--<appender-ref ref="SPRING_BOOT_ADMIN" />-->
+    </root>
+</configuration>

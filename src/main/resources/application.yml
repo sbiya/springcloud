@@ -1,0 +1,68 @@
+server:
+  port: 8008
+  servlet:
+    context-path: /
+
+
+spring:
+    main:
+      allow-bean-definition-overriding: true
+    http:
+      encoding:
+        charset: utf-8
+    aop:
+      proxy-target-class: true
+    application:
+      name: singleProject
+    datasource:
+#        url: jdbc:mysql://192.168.202.129:33306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    boot:
+        admin:
+          client:
+            url:  http://localhost:8000   #这里配置admin server 的地址
+
+
+
+# 开启seata日志打印
+#logging:
+#  level:
+#    io:
+#      seata: info
+
+mybatis:
+  typeAliasesPackage: com.icss.springcloud.SpringBootApplication.entity
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper:
+    reload:
+      enable: true
+      mapper-location: classpath:/mapper/*.xml
+
+
+
+#pagehelper:
+# helperDialect: mysql
+# reasonable: true
+# supportMethodsArguments: true
+# params: count=countSql
+
+
+
+ #开放端点用于SpringBoot Admin的监控
+management:
+ endpoints:
+   web:
+     exposure:
+       include: '*'
+
+#系统日志配置
+logging:
+  #spring admin boot日志输出配置,需要跟logback-spring.xml配置中日志路径一致
+  file:
+    name: logs/springboot-admin/info.log
